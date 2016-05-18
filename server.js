@@ -21,6 +21,15 @@ app.get('/', (request, response) => {
   response.render ('index', { title: "SpamCatcher - Mail classifier using NLP"} );
 });
 
+app.get('/classify', (request, response) => {
+	var text_list = [request.query.data];
+	var p = ml.classifiers.classify(module_id, text_list, true);
+	p.then(function (res) {
+		//console.log(res.result);
+		response.send ({ "result": res.result});
+	});
+});
+
 app.listen(app.get('port'), () => {
     console.log(`Node app is running at localhost: ${app.get('port')}` );
 });
