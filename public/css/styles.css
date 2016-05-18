@@ -12,13 +12,21 @@ h1 {
 	color:#DDCCEE;
 }
 
+#clasificador, #btnCalcular, #btnLimpiar {
+  background-color:#f39c12;
+}
+
+#textocopyright {
+  color:#FFFFFF;
+}
+
 
 /* Custom container */
 .container-full {
   margin: 0 auto;
   width: 100%;
   min-height:50%;
-  background-color:#110022;
+  background-color:#f39c12;
   color:#eee;
   overflow:hidden;
 }
@@ -34,5 +42,5 @@ h1 {
 
 body {
 height: auto;
-  background-image: url("../images/Background.jpg");
+  background-image: url("../images/Background2.jpg");
 }
